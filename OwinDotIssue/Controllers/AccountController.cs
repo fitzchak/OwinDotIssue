@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.ModelBinding;
-using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.OAuth;
 using OwinDotIssue.Models;
@@ -132,7 +131,7 @@ namespace OwinDotIssue.Controllers
 				return BadRequest(ModelState);
 			}
 
-			IdentityResult result;
+		//	IdentityResult result;
 
 
 			return Ok();
@@ -224,7 +223,7 @@ namespace OwinDotIssue.Controllers
 			get { return Request.GetOwinContext().Authentication; }
 		}
 
-		private IHttpActionResult GetErrorResult(IdentityResult result)
+		/*private IHttpActionResult GetErrorResult(IdentityResult result)
 		{
 			if (result == null)
 			{
@@ -251,7 +250,7 @@ namespace OwinDotIssue.Controllers
 			}
 
 			return null;
-		}
+		}*/
 
 		private class ExternalLoginData
 		{
